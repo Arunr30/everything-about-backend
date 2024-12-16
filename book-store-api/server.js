@@ -1,14 +1,11 @@
 require('dotenv').config()
 const express = require('express')
-const connectToDB = require('./database/db')
 const app = express()
 
+const PORT = process.env.PORT
 
-connectToDB();
 
-const PORT = process.env.PORT || 3000
-app.use(express.json())
 
 app.listen(PORT, () => {
-    console.log(`app is now listening to ${PORT}`)
+    console.log(`server is connected to ${PORT}`)
 })
