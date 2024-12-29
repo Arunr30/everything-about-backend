@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-App</title>
+  </head>
+  <body>
+    <div id="users-list">
+      <h3>online users</h3>
+      <ul id="users"></ul>
+    </div>
+    <div id="chat"></div>
+    <form id="message-form">
+      <input type="text" placeholder="message" id="input-message" />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const chat = document.getElementById("chat");
+    const usersList = document.getElementById("users");
+    const messageForm = document.getElementById("message-form");
+    const messageInput = document.getElementById("input-message");
+
+    const userName = prompt("Enter your username");
+    socket.emit("join", userName);
+  </script>
+</html>
