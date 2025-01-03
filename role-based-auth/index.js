@@ -9,6 +9,7 @@ app.use(express.json());
 
 app.use('/api/auth', authroute)
 app.use('/api/home', homeroute )
+app.use('/api/auth', adm)
 
 connectToDb();
 app.listen(process.env.PORT, () => {
