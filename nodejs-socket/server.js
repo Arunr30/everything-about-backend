@@ -23,3 +23,10 @@ io.on('connection', (socket) => {
 
   io.emit('userList', Array.from(users))
 })
+
+const PORT = 5001
+
+app.listen(PORT, () => {
+  console.log('server is serving');
+  
+})
