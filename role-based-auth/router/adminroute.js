@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/admin', authMiddleware,adminMiddleware, async(req, res) => {
   res.json({
-    success: false,
+    success: true,
     msg: 'welcome to the admin page'
   })
 })
