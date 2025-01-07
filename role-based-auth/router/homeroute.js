@@ -4,12 +4,17 @@ const router = express.Router();
 
 
 router.get('/welcome', authMiddleware, async (req, res) => {
-  const {username, userId, email} = req.userInfo
+  const {username, userId, email, role} = req.userInfo
 
   res.json({
-    username: username,
-    userid: userId,
-    email: email
+    message: "welcome to home page",
+    user: {
+      username: username,
+      userid: userId,
+      email: email,
+      role: role
+    }
+   
   })
 })
 

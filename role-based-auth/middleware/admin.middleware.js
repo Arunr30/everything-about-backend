@@ -1,8 +1,8 @@
 const adminMiddleware = async(req, res, next)=> {
-  if(req.user.role !== 'admin') {
-    res.json({
+  if(req.userInfo.role !== 'admin') {
+    return res.json({
       success: false,
-      msg: 'access denied!'
+      msg: 'access denied! admin rights requuired!!'
     })
 
   }
