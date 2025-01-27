@@ -7,7 +7,7 @@
 const buff = Buffer.alloc(10)
 buff.write('hello') // it allocates a memory for that hello
 
-console.log(buff); //  allocating a memory
+console.log(buff); // allocating a memory
 
 
 

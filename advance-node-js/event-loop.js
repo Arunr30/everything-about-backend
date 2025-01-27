@@ -7,7 +7,5 @@ setTimeout(() => {
 }, 0)
 
 setImmediate(() => {
-  // run something
-  console.log('imm');
-  
-});
+  console.log('heyy')
+})
